@@ -39,17 +39,12 @@ function myFunction() {
       document.getElementById("date") as HTMLInputElement
     );
  
-  if (reasoning!=null && title!=null) {
-    if (date=null) {
-    document.getElementById("welovecookies").innerHTML =
-    "Write me a proposed bill for the New Jersey legislature titled " + title + " along with 3 clauses: one clause that explains why it is important, one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed";
-    } else if (date!=null) {
+    if (reasoning != null) {
     document.getElementById("welovecookies").innerHTML =
     "Write me a proposed bill for the New Jersey legislature titled " + title + " along with 3 clauses: one clause that explains why it is important and " + reasoning + ", one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed: " + date;
-    } 
   } else {
-    document.getElementById("welovecookies").innerHTML = "Please fill in the reasoning or the title"
-    
+    document.getElementById("welovecookies").innerHTML =
+    "Write me a proposed bill for the New Jersey legislature titled " + title + " along with 3 clauses: one clause that explains why it is important, one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed";
   }
 }
 
