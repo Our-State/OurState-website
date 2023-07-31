@@ -14,6 +14,7 @@
         <td>${billData.last_action_date}</td>
         <td>${billData.last_action}</td>
         <td>${billData.title}</td>
+        <td><a href='${billData.text_url}' target='_blank'>${billData.text_url}</a></td>
       `;
     return newRow;
   }
@@ -95,6 +96,7 @@
     <th>Last Action Date</th>
     <th>Last Action</th>
     <th>Title</th>
+    <th>Link</th>
   </tr>
 </table>
 
