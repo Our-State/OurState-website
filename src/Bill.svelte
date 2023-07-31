@@ -3,7 +3,7 @@
 </svelte:head>
 
 <main>
-
+<!--TODO, make an input system for this and clean up the code-->
 <button on:click={myFunction}>Click here!!!!!!!!!!!</button>
 
 <p id="welovecookies"></p>
