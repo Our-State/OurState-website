@@ -81,7 +81,7 @@
 </script>
 
 <h1>NJ Bill Search</h1>
-<input type="text" id="searchInput" placeholder="Enter search query" />
+<input type="text" id="searchInput" placeholder="Enter Search Query" />
 <button on:click={searchBills}>Search</button>
 <div class="loading-container">
   <div class="loading" />

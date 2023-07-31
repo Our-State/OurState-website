@@ -5,6 +5,17 @@
 <main>
 <!--TODO, make an input system for this and clean up the code-->
 <button on:click={myFunction}>Click here!!!!!!!!!!!</button>
+<br>
+<br>
+<span>Please enter your bill's name:</span>
+<br>
+<input type="text" id="title" placeholder="Title">
+<br>
+<br>
+<span>Please enter your bill's name:</span>
+<br>
+<input type="text" id="title" placeholder="Title">
+
 
 <p id="welovecookies"></p>
 </main>
