@@ -3,13 +3,13 @@
 
   const dispatcher = createEventDispatcher();
   function legislature() {
-    dispatcher("legislature")
+    dispatcher("legislature");
   }
 </script>
 
 <svelte:head>
   <title>OurState - Home</title>
-  </svelte:head>
+</svelte:head>
 
 <main>
   <section class="hero">
@@ -17,7 +17,11 @@
       <div class="column-left">
         <h1>OurState</h1>
         <p>Simplifying Legislature</p>
-        <button on:click={legislature}>Find Legislature</button>
+        <p>
+          Im not too sure what goes here, so u guys figure that out and i can
+          add it
+        </p>
+        <!--<button on:click={legislature}>Find Legislature</button>-->
       </div>
       <div class="column-right">
         <!--Image-->

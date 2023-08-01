@@ -1,52 +1,95 @@
+<script lang="ts">
+  function myFunction() {
+    let title = document.getElementById("title") as HTMLInputElement;
+    let reasoning = document.getElementById("reasoning") as HTMLInputElement;
+    let date = document.getElementById("date") as HTMLInputElement;
+
+    if (reasoning != null) {
+      document.getElementById("welovecookies").innerHTML =
+        "Write me a proposed bill for the New Jersey legislature titled " +
+        title +
+        " along with 3 clauses: one clause that explains why it is important and " +
+        reasoning +
+        ", one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed: " +
+        date;
+    } else {
+      document.getElementById("welovecookies").innerHTML =
+        "Write me a proposed bill for the New Jersey legislature titled " +
+        title +
+        " along with 3 clauses: one clause that explains why it is important, one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed";
+    }
+  }
+</script>
+
 <svelte:head>
   <title>OurState - Bill Archive</title>
 </svelte:head>
 
 <main>
-<!--TODO, make an input system for this and clean up the code-->
-<br>
-<br>
-<span>Please enter your bill's name:</span>
-<br>
-<input type="text" id="title" placeholder="Title">
-<br>
-<br>
-<span>Why do you want to pass this bill:</span>
-<br>
-<input type="text" id="reasoning" placeholder="Reasoning">
-<br>
-<br>
-<span>What is the date you want to pass this bill by? In [Month],[Day],[Year] format (optional):</span>
-<br>
-<input type="text" id="Date" placeholder="Date">
-<br>
-<br>
-<button on:click={myFunction}>Click Here to Submit</button>
+  <body class="hero">
+    <div class="format">
+      <br />
+      <br />
+      <span>Please enter your bill's name:</span>
+      <br />
+      <input type="text" id="title" placeholder="Title" />
+      <br />
+      <br />
+      <span>Why do you want to pass this bill:</span>
+      <br />
+      <input type="text" id="reasoning" placeholder="Reasoning" />
+      <br />
+      <br />
+      <span
+        >What is the date you want to pass this bill by? In [Month],[Day],[Year]
+        format (optional):</span>
+      <br />
+      <input type="text" id="Date" placeholder="Date" />
+      <br />
+      <br />
+      <button on:click={myFunction}>Click Here to Submit</button>
+    </div>
 
-
-<p id="welovecookies"></p>
+    <p id="welovecookies" />
+  </body>
 </main>
-<script lang="ts">
 
-function myFunction() {
-  let title = (
-      document.getElementById("title") as HTMLInputElement
-    );
-  let reasoning = (
-      document.getElementById("reasoning") as HTMLInputElement
-    );
-  let date = (
-      document.getElementById("date") as HTMLInputElement
-    );
- 
-    if (reasoning != null) {
-    document.getElementById("welovecookies").innerHTML =
-    "Write me a proposed bill for the New Jersey legislature titled " + title + " along with 3 clauses: one clause that explains why it is important and " + reasoning + ", one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed: " + date;
-  } else {
-    document.getElementById("welovecookies").innerHTML =
-    "Write me a proposed bill for the New Jersey legislature titled " + title + " along with 3 clauses: one clause that explains why it is important, one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed";
+<style>
+  .hero {
+    background: #fdcc04;
+    height: 40.7rem;
   }
-}
 
-</script>
+  .format {
+    margin-left: 5rem;
+    white-space: nowrap;
+  }
 
+  span {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 20rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 6rem;
+    width: 20rem;
+  }
+
+  button:hover {
+    background: #fff;
+    color: #000;
+  }
+</style>
