@@ -18,8 +18,7 @@
         <h1>OurState</h1>
         <p>Simplifying Legislature</p>
         <p>
-          Im not too sure what goes here, so u guys figure that out and i can
-          add it
+          OurState aims to increase civic engagement, promote transparency, and bridge the gap between voters and lawmakers. Ultimately, the goal is to create a more informed, participatory democracy where every citizen has a voice in the decisions that affect their lives.
         </p>
         <!--<button on:click={legislature}>Find Legislature</button>-->
       </div>
