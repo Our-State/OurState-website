@@ -66,13 +66,18 @@
   }
 
   span {
+    font-family: "Titillium Web", sans-serif;
     font-size: 2rem;
   }
 
   input {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
     width: 20rem;
     height: 2rem;
     font-size: 1rem;
+    background-color: #fffff4;
   }
 
   button {
@@ -84,8 +89,8 @@
     background: #000;
     cursor: pointer;
     border-radius: 50px;
-    height: 6rem;
-    width: 20rem;
+    height: 5rem;
+    width: 10rem;
   }
 
   button:hover {
