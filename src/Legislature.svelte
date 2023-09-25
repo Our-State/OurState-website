@@ -113,15 +113,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 16px;
-    border: none;
-    color: #fdcc04;
+    border-style: solid;
+    border-color: #000;
+    color: #fffff4;
     background: #000;
     cursor: pointer;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     height: 2rem;
   }
   button:hover {
-    background: #fff;
+    background: #fffff4;
     color: #000;
   }
 
@@ -130,7 +131,8 @@
   }
 
   body {
-    background: #fdcc04;
+    font-family: 'Titillium Web', sans-serif;
+    background: #fffff4;
     height: 100%;
     margin-top: -1.4rem;
   }

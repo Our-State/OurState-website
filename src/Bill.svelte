@@ -47,7 +47,7 @@
       <input type="text" id="Date" placeholder="Date" />
       <br />
       <br />
-      <button on:click={myFunction}>Click Here to Submit</button>
+      <button on:click={myFunction}>Submit</button>
     </div>
 
     <p id="welovecookies" />
@@ -56,7 +56,7 @@
 
 <style>
   .hero {
-    background: #fdcc04;
+    background: #fffff4;
     height: 40.7rem;
   }
 
@@ -80,7 +80,7 @@
     padding-right: 1rem;
     font-size: 2rem;
     border: none;
-    color: #fdcc04;
+    color: #fffff4;
     background: #000;
     cursor: pointer;
     border-radius: 50px;

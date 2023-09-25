@@ -85,12 +85,13 @@
 </main>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Titillium+Web:ital,wght@0,300;1,400&display=swap');
   button {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 16px;
     border: none;
-    color: #fdcc04;
+    color: #fffff4;
     background: #000;
     cursor: pointer;
     border-radius: 50px;
@@ -108,7 +109,7 @@
 
   nav {
     height: 80px;
-    background: #cd9704;
+    background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +118,9 @@
   }
 
   .logo {
-    color: #000;
+    color: #fffff4;
+    font-family: "Titillium Web", sans-serif;
+    font-style:italic;
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;

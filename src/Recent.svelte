@@ -3,14 +3,16 @@
 </svelte:head>
 <body>
 <div class="hero">
-<h1>RECENT BILLS idk what goes here so its gonna be blank for now</h1>
+<h1>Coming Soon!</h1>
 </div>
 </body>
 
 <style>
 
 body {
-    background: #fdcc04;
+    font-family: "Titillium Web", sans-serif;
+    text-align: center;
+    background: #fffff4;
     height: 40.7rem;
     margin-top: -1.4rem;
   }
