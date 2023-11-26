@@ -5,6 +5,9 @@
   import Recent from "./Recent.svelte";
   import { app } from "./firebase";
   import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+  import { inject } from '@vercel/analytics';
+ 
+  inject();
 
   enum Page {
     Home,
