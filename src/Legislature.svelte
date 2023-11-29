@@ -6,7 +6,6 @@
     newRow.innerHTML = `
         <td>${billData.state}</td>
         <td>${billData.bill_number}</td>
-        <td>${billData.bill_id}</td>
         <td>${billData.last_action_date}</td>
         <td>${billData.last_action}</td>
         <td>${billData.title}</td>
@@ -97,10 +96,9 @@
     <tr>
       <th>State</th>
       <th>Bill Number</th>
-      <th>Bill ID</th>
       <th>Last Action Date</th>
       <th>Last Action</th>
-      <th>Title</th>
+      <th>Title/Synopsis</th>
       <th>Link</th>
     </tr>
   </table>

@@ -52,7 +52,7 @@
         >Recent Bills</button
       >
       <button class="navBar" on:click={() => (page = Page.Bill)}
-        >Make a Bill</button
+        >Draft Legislation</button
       >
       {#if !isSignedIn}
         {#if !isSignInButtonDisabled}

@@ -55,7 +55,7 @@
         <th>Bill Number</th>
         <th>Last Action Date</th>
         <th>Last Action</th>
-        <th>Title</th>
+        <th>Title/Synopsis</th>
         <th>Link</th>
       </tr>
     </thead>
