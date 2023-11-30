@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { slide } from "svelte/transition";
   import Bill from "./Bill.svelte";
   import Home from "./Home.svelte";
   import Legislature from "./Legislature.svelte";
   import Recent from "./Recent.svelte";
   import { app } from "./firebase";
   import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-  
 
   enum Page {
     Home,
@@ -69,33 +69,34 @@
   </nav>
 
   {#if page == Page.Home}
-    <Home on:legislature={() => (page = Page.Legislature)} />
+    <main transition:slide>
+      <Home on:legislature={() => (page = Page.Legislature)} />
+    </main>
   {:else if page == Page.Legislature}
-    <Legislature />
+    <main transition:slide>
+      <Legislature />
+    </main>
   {:else if page == Page.Recent}
-    <Recent />
+    <main transition:slide>
+      <Recent />
+    </main>
   {:else if page == Page.Bill}
-    <Bill />
-  {/if}
-
-  {#if isSignedIn}
-    <script>
-      console.log("OOGA BOOGA");
-    </script>
+    <main transition:slide>
+      <Bill />
+    </main>
   {/if}
 </main>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Titillium+Web:ital,wght@0,300;1,400&display=swap');
   button {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 16px;
     border: none;
-    color: #fffff4;
-    background: #000;
+    color: var(--bg);
+    background: var(--blue);
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 1rem;
     height: 2rem;
   }
 
@@ -104,13 +105,14 @@
   }
 
   button:hover {
-    background: #fff;
-    color: #000;
+    background: var(--dim-bg);
+    color: var(--fg);
+    border-radius: .5rem;
   }
 
   nav {
     height: 80px;
-    background: #000;
+    background: color-mix(in srgb, var(--blue) 60%, var(--fg));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,10 +123,15 @@
   .logo {
     color: #fffff4;
     font-family: "Titillium Web", sans-serif;
-    font-style:italic;
+    font-style: italic;
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
     padding: 0 2rem;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
   }
 </style>

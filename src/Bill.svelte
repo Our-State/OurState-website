@@ -1,21 +1,22 @@
 <script lang="ts">
-  function myFunction() {
-    let title = document.getElementById("title") as HTMLInputElement;
-    let reasoning = document.getElementById("reasoning") as HTMLInputElement;
-    let date = document.getElementById("date") as HTMLInputElement;
+  let weLoveCookies: HTMLParagraphElement,
+    title: HTMLInputElement,
+    reasoning: HTMLInputElement,
+    date: HTMLInputElement;
 
+  function myFunction() {
     if (reasoning != null) {
-      document.getElementById("welovecookies").innerHTML =
+      weLoveCookies.innerHTML =
         "Write me a proposed bill for the New Jersey legislature titled " +
-        title +
+        title.value +
         " along with 3 clauses: one clause that explains why it is important and " +
-        reasoning +
+        reasoning.value +
         ", one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed: " +
         date;
     } else {
-      document.getElementById("welovecookies").innerHTML =
+      weLoveCookies.innerHTML =
         "Write me a proposed bill for the New Jersey legislature titled " +
-        title +
+        title.value +
         " along with 3 clauses: one clause that explains why it is important, one clause with the actions it will take to achieve it, and one enactment clause under the previous clause that clearly explains the actions that will be made and states the date that it will be passed";
     }
   }
@@ -25,76 +26,63 @@
   <title>OurState - Bill Archive</title>
 </svelte:head>
 
-<main>
-  <body class="hero">
-    <div class="format">
-      <br />
-      <br />
-      <span>Please enter your bill's name:</span>
-      <br />
-      <input type="text" id="title" placeholder="Title" />
-      <br />
-      <br />
-      <span>Why do you want to pass this bill:</span>
-      <br />
-      <input type="text" id="reasoning" placeholder="Reasoning" />
-      <br />
-      <br />
-      <span
-        >What is the date you want to pass this bill by? In [Month],[Day],[Year]
-        format (optional):</span>
-      <br />
-      <input type="text" id="Date" placeholder="Date" />
-      <br />
-      <br />
-      <button on:click={myFunction}>Submit</button>
-    </div>
+<div class="format">
+  <br />
+  <br />
+  <span>Please enter your bill's name:</span>
+  <br />
+  <input type="text" bind:this={title} placeholder="Title" />
+  <br />
+  <br />
+  <span>Why do you want to pass this bill:</span>
+  <br />
+  <input type="text" bind:this={reasoning} placeholder="Reasoning" />
+  <br />
+  <br />
+  <span
+    > (Optional) What is the date you want to pass this bill by? In [Month],[Day],[Year]
+    format:</span
+  >
+  <br />
+  <input type="text" bind:this={date} placeholder="Date" />
+  <br />
+  <br />
+  <button on:click={myFunction}>Submit</button>
+</div>
 
-    <p id="welovecookies" />
-  </body>
-</main>
+<p bind:this={weLoveCookies} />
 
 <style>
-  .hero {
-    background: #fffff4;
-    height: 40.7rem;
-  }
-
   .format {
     margin-left: 5rem;
     white-space: nowrap;
   }
 
   span {
-    font-family: "Titillium Web", sans-serif;
     font-size: 2rem;
   }
 
   input {
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
+    border: 2px var(--fg) solid;
     width: 20rem;
     height: 2rem;
-    font-size: 1rem;
-    background-color: #fffff4;
+    font-size: 1.5rem;
+    background-color: var(--bg);
   }
 
   button {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 2rem;
+    padding: .625rem;
+    font-size: 1.25rem;
     border: none;
-    color: #fffff4;
-    background: #000;
+    background-color: var(--blue);
+    color: var(--bg);
     cursor: pointer;
-    border-radius: 50px;
-    height: 5rem;
-    width: 10rem;
+    border-radius: 1rem;
   }
 
   button:hover {
-    background: #fff;
-    color: #000;
+    background-color: var(--dim-bg);
+    color: var(--fg);
+    border-radius: .5rem;
   }
 </style>
