@@ -52,10 +52,12 @@
 
 <p bind:this={weLoveCookies} />
 
+  <!-- powr BEGIN --><div class="powr-form-builder" id="sharethis-form-builder-651a0aefd43c16001201d81d"></div><!-- powr END -->
+
 <style>
   .format {
     margin-left: 5rem;
-    white-space: nowrap;
+    white-space: flex;
   }
 
   span {

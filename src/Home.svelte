@@ -16,18 +16,20 @@
     <div class="hero-container">
       <div class="column-left">
         <h1>OurState</h1>
-        <p>Simplifying Legislature</p>
+        <!--<p>Simplifying Legislature</p>-->
         <p>
-          OurState aims to increase civic engagement, promote transparency, and bridge the gap between voters and lawmakers. Ultimately, the goal is to create a more informed, participatory democracy where every citizen has a voice in the decisions that affect their lives.
-        </p>
-        <!--<button on:click={legislature}>Find Legislature</button>-->
-      </div>
-  </section>
+          We're here to boost your involvement in shaping our community, by making sure your voice is heard. Together, let's build a more informed and inclusive democracy where your input matters. 
+          </p>
+      
+        </section>
 </main>
 
 <style>
   .hero {
-    background: #fffff4;
+    /*background: #fffff4;*/
+    /*background: white;*/
+    background-image: url("s_NJ Capitol building(1).jpg");
+    background-size: cover;
   }
 
   .hero-container {
@@ -43,22 +45,24 @@
     justify-content: center;
     align-items: center;
     color: #000;
-    padding: 0rem 2rem;
+    padding: 0rem 15rem;
     text-align: center;
   }
 
   .column-left h1 {
-    font-family: 'Titillium Web', sans-serif;
-    font-style: italic;
+    font-family: 'Rabbid Highway Sign IV', sans-serif;
+    /*font-style: italic;*/
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 4rem;
+    color: aliceblue;
   }
 
   .column-left p {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Varela', sans-serif;
     margin-bottom: 2rem;
     font-size: 1.5rem;
     line-height: 1.5;
+    color: aliceblue;
   }
 /*
   .column-right {

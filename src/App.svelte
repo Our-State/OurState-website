@@ -40,6 +40,7 @@
   }
 </script>
 
+
 <main>
   <nav>
     <div class="logo">Welcome to OurState!</div>
@@ -68,6 +69,9 @@
     </div>
   </nav>
 
+  <div class="sharethis-inline-share-buttons"></div>
+
+
   {#if page == Page.Home}
     <main transition:slide>
       <Home on:legislature={() => (page = Page.Legislature)} />
@@ -88,13 +92,15 @@
 </main>
 
 <style>
+
   button {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
+    font-family: 'Varela', sans-serif;
     color: var(--bg);
-    background: var(--blue);
+    background-color: transparent;
     cursor: pointer;
     border-radius: 1rem;
     height: 2rem;
@@ -105,14 +111,15 @@
   }
 
   button:hover {
-    background: var(--dim-bg);
-    color: var(--fg);
+    background: transparent;
+    color: #E1D9D1;
     border-radius: .5rem;
   }
 
   nav {
     height: 80px;
-    background: color-mix(in srgb, var(--blue) 60%, var(--fg));
+    /*background: color-mix(in srgb, var(--blue) 60%, var(--fg));*/
+    background-color: #8c7949;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,11 +129,10 @@
 
   .logo {
     color: #fffff4;
-    font-family: "Titillium Web", sans-serif;
-    font-style: italic;
+    font-family: "Cabin", sans-serif;
+    /*font-style: italic;*/
     font-size: 2.5rem;
     font-weight: bold;
-    font-style: italic;
     padding: 0 2rem;
   }
 
