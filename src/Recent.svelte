@@ -73,6 +73,18 @@
     border: 2px solid #00000030;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
   }
+
+  th {
+    background-color: var(--blue);
+    color: var(--bg);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
 </style>
